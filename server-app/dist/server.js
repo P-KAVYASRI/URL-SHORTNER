@@ -1,9 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
-const dotenv = require("dotenv");
-const cors = require("cors");
+import express from "express";
+import dotenv from "dotenv";
+import connectDb from "./config/dbConfig.js";
 dotenv.config();
+connectDb();
 const port = process.env.PORT || 5001;
 const app = express();
 app.get("/", (req, res) => {

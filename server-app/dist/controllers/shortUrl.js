@@ -48,7 +48,35 @@ const getAllUrl = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.getAllUrl = getAllUrl;
-const getUrl = (req, res) => __awaiter(void 0, void 0, void 0, function* () { });
+const getUrl = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const shortUrl = yield shortUrl_1.urlModel.findOne({ shortUrl: req.params.id });
+        if (!shortUrl) {
+            res.status(404).send({ "messsage": "Full URL not found" });
+        }
+        else {
+            shortUrl.clicks++;
+            shortUrl.save();
+            res.redirect(`${shortUrl.fullUrl}`);
+        }
+    }
+    catch (error) {
+        res.status(500).send({ message: "Something went wrong" });
+    }
+});
 exports.getUrl = getUrl;
-const deleteUrl = (req, res) => __awaiter(void 0, void 0, void 0, function* () { });
+const deleteUrl = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const shortUrl = yield shortUrl_1.urlModel.findByIdAndDelete(req.params.id);
+        if (shortUrl) {
+            res.status(204).send();
+        }
+        else {
+            res.status(404).send({ message: "URL not found" });
+        }
+    }
+    catch (error) {
+        res.status(500).send({ message: "Something went wrong" });
+    }
+});
 exports.deleteUrl = deleteUrl;

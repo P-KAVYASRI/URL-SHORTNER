@@ -1,9 +1,12 @@
-import express = require("express");
-import dotenv = require("dotenv");
-import cors = require("cors");
-import connectDb from "./config/dbConfig";
-import shortUrl from "./routes/shortUrl";
-dotenv.config();
+import dotenv = require('dotenv');
+import path = require('path');
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
+
+import express = require('express');
+import cors = require('cors');
+import connectDb from './config/dbConfig';
+import shortUrl from './routes/shortUrl';
+
 connectDb();
 
 const port= process.env.PORT || 5001;

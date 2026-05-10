@@ -1,42 +1,34 @@
-﻿# URL Shortener
+# 🚀 URL Shortener — MERN Stack Web Application
 
-A modern MERN Stack URL Shortener application built using React, TypeScript, Node.js, Express, MongoDB and Tailwind CSS.
-
----
-
-## Features
-
-- Shorten long URLs instantly
-- Redirect short URLs to original links
-- Copy shortened URLs to clipboard
-- Delete URLs
-- Track click counts
-- Responsive modern UI
-- REST API integration
-- MongoDB database storage
+A modern and responsive URL Shortener web application built using React, TypeScript, Tailwind CSS, Node.js, Express.js and MongoDB.
 
 ---
 
-# Tech Stack
+## 🛠 Tech Stack
 
-## Frontend
-- React
-- TypeScript
-- Tailwind CSS
-- Axios
-
-## Backend
-- Node.js
-- Express.js
-- TypeScript
-
-## Database
-- MongoDB
-- Mongoose
+![React](https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss)
+![NodeJS](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js)
+![ExpressJS](https://img.shields.io/badge/Server-Express.js-black?style=for-the-badge&logo=express)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb)
 
 ---
 
-# Project Structure
+# ✨ Features
+
+- 🔗 Shorten long URLs instantly
+- 📋 Copy short URLs to clipboard
+- 🗑 Delete shortened URLs
+- 📊 Track click counts
+- 🌌 Modern galaxy-themed UI
+- 📱 Fully responsive design
+- ⚡ Fast REST API integration
+- 💾 MongoDB database storage
+
+---
+
+# 📁 Project Structure
 
 ```plaintext
 client/
@@ -44,7 +36,8 @@ client/
  │    ├── components/
  │    ├── helpers/
  │    ├── interface/
- │    └── assets/
+ │    ├── assets/
+ │    └── App.tsx
 
 server/
  ├── src/
@@ -57,7 +50,7 @@ server/
 
 ---
 
-# Installation
+# ⚙️ Installation
 
 ## Clone Repository
 
@@ -67,7 +60,7 @@ git clone <your-repository-url>
 
 ---
 
-# Frontend Setup
+# 💻 Frontend Setup
 
 ```bash
 cd client
@@ -83,7 +76,7 @@ http://localhost:3000
 
 ---
 
-# Backend Setup
+# 🖥 Backend Setup
 
 ```bash
 cd server
@@ -99,7 +92,7 @@ http://localhost:5001
 
 ---
 
-# Environment Variables
+# 🔐 Environment Variables
 
 Create `.env` file inside server folder.
 
@@ -110,57 +103,35 @@ MONGO_URI=your_mongodb_connection_string
 
 ---
 
-# API Endpoints
+# 🔗 API Endpoints
 
-## Create Short URL
-
-```http
-POST /api/shortUrl
-```
-
-## Get All URLs
-
-```http
-GET /api/shortUrl
-```
-
-## Get Single URL
-
-```http
-GET /api/shortUrl/:id
-```
-
-## Delete URL
-
-```http
-DELETE /api/shortUrl/:id
-```
-
-## Redirect URL
-
-```http
-GET /:shortUrl
-```
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/shortUrl` | Create short URL |
+| GET | `/api/shortUrl` | Get all URLs |
+| GET | `/api/shortUrl/:id` | Get single URL |
+| DELETE | `/api/shortUrl/:id` | Delete URL |
+| GET | `/:shortUrl` | Redirect to original URL |
 
 ---
 
-# Future Enhancements
+# 🌟 Future Enhancements
 
-- User Authentication
-- QR Code Generation
-- Analytics Dashboard
-- Custom Short URLs
-- Expiry Links
-- Dark/Light Mode
-
----
-
-# Author
-
-Kavya Sri
+- 🔐 User Authentication
+- 📈 Analytics Dashboard
+- 🎨 Dark / Light Mode
+- 📱 QR Code Generator
+- ✏️ Custom Short URLs
+- ⏳ Expiry Links
 
 ---
 
-# License
+# 👩‍💻 Author
+
+### Kavya Sri
+
+---
+
+# 📜 License
 
 This project is licensed under the MIT License.

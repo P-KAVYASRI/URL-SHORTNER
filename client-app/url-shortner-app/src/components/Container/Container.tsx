@@ -12,7 +12,7 @@ const Container: React.FunctionComponent<IContainerProps> = () => {
   const [data, setData] = React.useState<UrlData[]>([]);
   const fetchTableData = async () => {
     try {
-      const response = await axios.get(`${serverUrl}/shortUrl`);
+     const response = await axios.get(`${serverUrl}/shorturl`);
       console.log("the response from server is :", response);
       setData(response.data);
       console.log("Data : ", response.data);
@@ -27,7 +27,7 @@ const Container: React.FunctionComponent<IContainerProps> = () => {
 
   return (<>
   <FormContainer />
-  <DataTable  />
+  <DataTable data={data} />
   </>
   );
 };

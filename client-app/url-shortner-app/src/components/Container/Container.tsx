@@ -3,6 +3,7 @@ import FormContainer from '../FormContainer/FormContainer';
 import type { UrlData } from '../../interface/UrlData';
 import axios from 'axios';
 import { serverUrl } from '../../helpers/Constants';
+import DataTable from '../DataTable/DataTable';
 
 interface IContainerProps {
 }
@@ -26,6 +27,7 @@ const Container: React.FunctionComponent<IContainerProps> = () => {
 
   return (<>
   <FormContainer />
+  <DataTable  />
   </>
   );
 };

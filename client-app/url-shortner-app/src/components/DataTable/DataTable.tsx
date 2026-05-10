@@ -58,7 +58,7 @@ const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
       return (
         <tr
           key={item._id}
-          className="bg-white border-b hover:bg-gray-50"
+          className="bg-slate-800 border-b hover:bg-gray-50"
         >
 
           <td className="px-6 py-3 break-words">
@@ -66,7 +66,7 @@ const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
               href={item.fullUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-cyan-500 hover:text-cyan-300 hover:underline"
             >
               {item.fullUrl}
             </a>
@@ -77,7 +77,7 @@ const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
               href={`${serverUrl.replace('/api', '')}/${item.shortUrl}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+            className="text-purple-300 hover:text-purple-200 hover:underline"
             >
               {item.shortUrl}
             </a>
@@ -92,7 +92,7 @@ const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
 
               <button
                 onClick={() => handleCopy(item.shortUrl)}
-                className="text-blue-700 hover:text-blue-900 cursor-pointer"
+                className="text-white hover:text-gray-300 cursor-pointer"
                 title="Copy Short URL"
               >
                 <svg
@@ -141,7 +141,7 @@ const DataTable: React.FunctionComponent<IDataTableProps> = (props) => {
 
   return (
     <div className="container mx-auto pt-2 pb-10">
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div className="relative overflow-x-auto shadow-2xl sm:rounded-2xl bg-slate-900/60 backdrop-blur-md">
 
         <table className="w-full table-fixed text-sm text-left text-gray-500">
 

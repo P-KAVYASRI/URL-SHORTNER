@@ -4,15 +4,20 @@ import Container from './components/Container/Container';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
 
-      <Header />
+    <div className="min-h-screen flex flex-col bg-[url('/bg.jpg')] bg-cover bg-center bg-fixed">
 
-      <main className="flex-grow">
-        <Container />
-      </main>
+      <div className="min-h-screen bg-black/50 flex flex-col">
 
-      <Footer />
+        <Header />
+
+        <main className="flex-grow">
+          <Container />
+        </main>
+
+        <Footer />
+
+      </div>
 
     </div>
   );

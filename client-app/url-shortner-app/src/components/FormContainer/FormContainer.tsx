@@ -26,7 +26,7 @@ const FormContainer: React.FunctionComponent<IFormContainerProps> = (props) => {
 
       setShortUrl(response.data.shortUrl);
       setFullUrl("");
-      updateReloadState();
+      updateReloadState
     } catch (err) {
       console.log(err);
     }

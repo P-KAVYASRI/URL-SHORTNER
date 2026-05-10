@@ -10,11 +10,17 @@ interface IContainerProps {
 
 const Container: React.FunctionComponent<IContainerProps> = () => {
   const [data, setData] = React.useState<UrlData[]>([]);
+  const [reload, setReload] = React.useState(false);
+  const updateReloadState = ():void => {
+    setReload(true)
+  };
+
   const fetchTableData = async () => {
     try {
      const response = await axios.get(`${serverUrl}/shorturl`);
       console.log("the response from server is :", response);
       setData(response.data);
+      setReload(false)
       console.log("Data : ", response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -23,11 +29,11 @@ const Container: React.FunctionComponent<IContainerProps> = () => {
 
   React.useEffect(() => {
     fetchTableData();
-  }, []);
+  }, [reload]);
 
   return (<>
-  <FormContainer />
-  <DataTable data={data} />
+  <FormContainer updateReloadState ={updateReloadState}/>
+  <DataTable updateReloadState ={updateReloadState} data={data} />
   </>
   );
 };
